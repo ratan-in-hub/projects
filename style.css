@@ -259,6 +259,7 @@ label {
     }
 
     .aligner {
+        width: 100%;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -276,17 +277,18 @@ label {
     .textSide h3 {
         bottom: auto;
         top: 130px;
-        margin-left: 80px;
+        margin-left: 30px;
         text-align: center;
     }
 
     .textSide p {
-        width: 70%;
-        margin-left: 80px;
+        width: 100%;
+        /* margin-left: 80px; */
         font-size: 0.7rem;
         font-weight: 300;
         line-height: 18px;
         bottom: auto;
+        scale: 0.9;
 
         top: 160px;
         text-align: left;
@@ -301,7 +303,7 @@ label {
     .gameName::before {
         bottom: auto;
         top: 40%;
-        left: 30%;
+        left: 27%;
         max-width: 180px;
     }
 
