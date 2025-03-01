@@ -171,6 +171,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    margin-bottom: 20px;
     margin-top: 40px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.438), -2px -2px 12px rgba(0, 0, 0, 0.2);
 }
