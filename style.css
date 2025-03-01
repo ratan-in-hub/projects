@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", "Playfair Display", Verdana, Geneva, Tahoma, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #f2dbeb;
+    overflow: hidden;
+}
+
+.circle1 {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(233, 119, 168, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: -60px;
+}
+
+.circle2 {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(233, 119, 168, 0.6);
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    right: 0px;
+}
+
+.circle3 {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(233, 119, 168, 0.9);
+    border-radius: 50%;
+    position: absolute;
+    top: 300px;
+    right: -60px;
+}
+
+.circle4 {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(233, 119, 168, 0.6);
+    border-radius: 50%;
+    position: absolute;
+    top: 450px;
+    right: 0px;
+}
+
+.circle5 {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(233, 119, 168, 0.3);
+    border-radius: 50%;
+    position: absolute;
+    top: 600px;
+    right: -70px;
+}
+
+.aligner {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    /* background-color: #fff; */
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.textSide {
+    /* margin-top: 40px; */
+    position: relative;
+    width: 500px;
+    /* background-color: #8a7373; */
+    height: 100%;
+}
+
+.textSide h3 {
+    text-decoration-line: underline;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    bottom: 250px;
+    color: rgb(233, 119, 168, 0.9);
+}
+
+.textSide p {
+    position: absolute;
+    margin: 10px;
+    width: 450px;
+    bottom: 100px;
+    line-height: 25px;
+    letter-spacing: 0.15rem;
+}
+
+.gameName {
+    font-size: 8rem;
+    position: relative;
+    
+    /* background-color: #b00707; */
+}
+
+.gameName::before {
+    content: "";
+    width: 0;
+    height: 15px;
+    background-color: rgb(233, 119, 168, 0.9);
+    position: absolute;
+    margin-top: 10px;
+    right: 18px;
+    bottom: 10px;
+    animation-name: zipp;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1500ms;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+
+@keyframes zipp {
+    to {
+        width: 50%;
+    }
+}
+
+.gameName::after {
+    content: "Everything's destined...";
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 100%;
+    left: 6px;
+    bottom:5px;
+    margin-top: 10px;
+    transform: translateX(50%);
+    animation-name: slider;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1500ms;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+@keyframes slider {
+    to {
+        transform: translateX(0);
+    }
+}
+
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.265);
+    position: relative;
+    backdrop-filter: blur(7px);
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 40px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.438), -2px -2px 12px rgba(0, 0, 0, 0.2);
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    background-color: rgba(242, 219, 235, 0.717);
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    outline: none;
+}
+
+input:active {
+    background-color: rgba(242, 219, 235, 0.717);
+    ;
+    border: 1px solid black;
+    outline: none;
+
+}
+
+label {
+    font-weight: 500;
+}
+
+#flames {
+    padding: 10px 30px;
+    position: absolute;
+    right: 20px;
+    bottom: 130px;
+    border-radius: 10px;
+    border: 1px solid black;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+}
+
+#flames::before {
+    content: "";
+    width: 250px;
+    height: 250px;
+    background-color: rgb(233, 119, 168, 0.9);
+    top: -60%;
+    left: -40%;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+    scale: 0;
+}
+
+#flames:hover::before{
+    animation-name: popUp;
+    animation-timing-function: ease-in-out;
+    animation-duration: 500ms;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+@keyframes popUp {
+    to {
+        scale: 1;
+    }
+}
+
+#result {
+    position: absolute;
+    bottom: 20px;
+    width: 75%;
+}
