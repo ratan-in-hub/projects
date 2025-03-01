@@ -278,6 +278,7 @@ label {
         bottom: auto;
         top: 130px;
         margin-left: 30px;
+        display: none;
         text-align: center;
     }
 
@@ -289,7 +290,7 @@ label {
         line-height: 18px;
         bottom: auto;
         scale: 0.9;
-
+        display: none;
         top: 160px;
         text-align: left;
     }
@@ -303,7 +304,7 @@ label {
     .gameName::before {
         bottom: auto;
         top: 40%;
-        left: 27%;
+        left: 25%;
         max-width: 180px;
     }
 
